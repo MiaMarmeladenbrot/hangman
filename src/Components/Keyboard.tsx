@@ -52,7 +52,9 @@ const Keyboard = ({
             key={key}
             className={`bg-gray-100 px-4 rounded-sm border-2 uppercase ${
               !isActive && !isInactive && !disabled && "hover:bg-blue-200"
-            } ${isActive && "bg-blue-400"} ${isInactive && "bg-gray-600 hover:bg-none"}`}
+            } ${isActive && "bg-blue-400"} ${
+              (isInactive || isActive) && "bg-gray-600 hover:bg-none"
+            }`}
             disabled={isInactive || isActive || disabled}
           >
             {key}
