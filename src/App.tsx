@@ -51,12 +51,14 @@ function App() {
   };
 
   return (
-    <div className=" max-w-[800px] flex flex-col gap-2 items-center justify-center text-center mt-10">
+    <div className="flex flex-col gap-2 items-center justify-center text-center mt-10 mx-2">
+      <h1 className="text-2xl font-bold mb-10">Guess the word!</h1>
+
       <HangmanDrawing numberOfGuesses={incorrectLetters.length} />
       <HangmanWord reveal={isLoser} guessedLetters={guessedLetters} wordToGuess={wordToGuess} />
 
       {(isWinner || isLoser) && (
-        <div className="flex items-center gap-10 mb-10">
+        <div className="flex items-center gap-10 mb-10 ">
           {isWinner && <p className="text-2xl font-bold mb-2 text-green-500">You have won!</p>}
           {isLoser && <p className="text-2xl font-bold mb-2 text-red-500">Try again!</p>}
           <button

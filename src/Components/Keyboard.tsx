@@ -41,8 +41,7 @@ const Keyboard = ({
   addGuessedLetter,
 }: KeyboardProps) => {
   return (
-    // <div className=" grid auto-cols-auto auto-cols-[minmax(75px, 1fr)] gap-2">
-    <div className=" flex flex-wrap gap-3 mx-10 mb-10">
+    <div className=" flex flex-wrap gap-3 mx-10 mb-10 max-w-[520px]">
       {KEYS.map((key) => {
         const isActive = activeLetters.includes(key);
         const isInactive = inactiveLetters.includes(key);

@@ -6,9 +6,9 @@ type HangmanWordProps = {
 
 const HangmanWord = ({ reveal = false, guessedLetters, wordToGuess }: HangmanWordProps) => {
   return (
-    <div className="flex gap-2 justify-center text-6xl font-bold uppercase font-mono mb-10">
+    <div className="flex gap-2 justify-center text-5xl font-bold uppercase font-mono mb-6">
       {wordToGuess.split("").map((letter, index) => (
-        <p className="border-b-4 border-black min-w-6" key={index}>
+        <p className="border-b-4 border-black min-w-8 min-h-14" key={index}>
           <span
             className={`${
               guessedLetters.includes(letter.toLowerCase()) || reveal ? "visible" : "hidden"
