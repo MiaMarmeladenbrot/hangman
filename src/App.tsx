@@ -11,7 +11,6 @@ function App() {
   };
 
   const [wordToGuess, setWordToGuess] = useState(getWord);
-  console.log(wordToGuess);
 
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
 
